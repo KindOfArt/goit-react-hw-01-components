@@ -11,7 +11,7 @@ import {
 export const Statistics = ({ title, stats }) => {
   return (
     <Container>
-      {title ? <Title>{title}</Title> : null}
+      {title && <Title>{title}</Title>}
 
       <StatList>
         {stats.map(({ id, label, percentage }) => (
@@ -26,7 +26,7 @@ export const Statistics = ({ title, stats }) => {
 };
 
 Statistics.propTypes = {
-  stats: PropTypes.array.isRequired,
+  stats: PropTypes.arrayOf(PropTypes.object).isRequired,
 };
 
 function getRandomHexColor() {
