@@ -2,9 +2,9 @@ import PropTypes from 'prop-types';
 
 import { TransactionItem, Td } from './Transaction.styled';
 
-export const Transaction = ({ id, type, amount, currency }) => {
+export const Transaction = ({ type, amount, currency }) => {
   return (
-    <TransactionItem key={id}>
+    <TransactionItem>
       <Td>{type}</Td>
       <Td>{amount}</Td>
       <Td>{currency}</Td>
@@ -13,8 +13,7 @@ export const Transaction = ({ id, type, amount, currency }) => {
 };
 
 Transaction.propTypes = {
-  id: PropTypes.number.isRequired,
   type: PropTypes.string.isRequired,
-  amount: PropTypes.number.isRequired,
-  currency: PropTypes.number.isRequired,
+  amount: PropTypes.string.isRequired,
+  currency: PropTypes.string.isRequired,
 };

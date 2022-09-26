@@ -4,7 +4,7 @@ function isOnline({ isOnline }) {
   return isOnline ? '#00ff33' : '#ff0000';
 }
 
-export const FriendItem = styled.li`
+export const Friend = styled.li`
   display: flex;
   align-items: center;
   min-width: 200px;
